@@ -1,0 +1,33 @@
+input,
+button {
+    padding: 15px;
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.12);
+    border-width: 1px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2),0 2px 2px rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12);
+}
+
+input {
+    width: 100%;
+    background-color: white;
+}
+
+button {
+    width: 100px;
+    background-color: blue;
+    color: white;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 30px;
+    display: block;
+    padding-bottom: 20px;
+}
+
+form {
+    width: 100%;
+}

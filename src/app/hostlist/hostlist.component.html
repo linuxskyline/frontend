@@ -1,0 +1,18 @@
+<div class="table-container">
+    <table id="hostlist">
+        <tr>
+            <th id="hostlist-name-header">Name</th>
+            <th>Total Updates</th>
+            <th>Security Updates</th>
+            <th>Token</th>
+        </tr>
+        <tr *ngFor="let host of hosts">
+            <td>
+                <a routerLink="/hosts/{{ host.ID }}/updates">{{ host.name }}</a>
+            </td>
+            <td>{{ host.updates }}</td>
+            <td>{{ host.securityUpdates }}</td>
+            <td>{{ host.token }}</td>
+        </tr>
+    </table>
+</div>

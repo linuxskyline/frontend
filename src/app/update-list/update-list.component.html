@@ -1,0 +1,16 @@
+<div class="table-container">
+        <table id="updatelist">
+            <tr>
+                <th id="hostlist-name-header">Name</th>
+                <th>Installed Version</th>
+                <th>Available Version</th>
+                <th>Security?</th>
+            </tr>
+            <tr *ngFor="let update of updates">
+                <td>{{ update.packageName }}</td>
+                <td>{{ update.currentVersion }}</td>
+                <td>{{ update.newVersion }}</td>
+                <td>{{ update.security }}</td>
+            </tr>
+        </table>
+    </div>
