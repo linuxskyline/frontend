@@ -13,7 +13,7 @@ export class UpdateService {
   constructor(private http: HttpClient) { }
 
   getUpdates(host_id: number): Observable<Update[]> {
-    this.cache this.http.get(`${this.config.apiRoot}/updates?id=${host_id}`, {
+    this.cache = this.http.get(`${this.config.apiRoot}/updates?id=${host_id}`, {
       headers: {
         "Authorization": `Bearer ${this.config.token}`
       }
