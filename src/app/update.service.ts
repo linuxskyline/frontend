@@ -13,9 +13,9 @@ export class UpdateService {
   constructor(private http: HttpClient) { }
 
   getUpdates(host_id: number): Observable<Update[]> {
-    this.cache = this.http.get(`http://localhost:8000/api/updates?id=${host_id}`, {
+    this.cache this.http.get(`${this.config.apiRoot}/updates?id=${host_id}`, {
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjF9.Vcp2grZ53t_OG3jwSXsRwfc_UUjboNgZarkAGiX0jgM"
+        "Authorization": `Bearer ${this.config.token}`
       }
     })
     .pipe(
