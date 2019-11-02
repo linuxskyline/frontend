@@ -20,8 +20,24 @@ export class HostService {
     });
   }
 
+  getHost(hostID: number) {
+    return this.http.get(`${this.config.apiRoot}/hosts/${hostID}`, {
+      headers: {
+        "Authorization": `Bearer ${this.config.token}`
+      }
+    });
+  }
+
   addHost(host: Host) {
     return this.http.post(`${this.config.apiRoot}/hosts`, host, {
+      headers: {
+        "Authorization": `Bearer ${this.config.token}`
+      }
+    })
+  }
+
+  deleteHost(hostID: number) {
+    return this.http.delete(`${this.config.apiRoot}/hosts/${hostID}`, {
       headers: {
         "Authorization": `Bearer ${this.config.token}`
       }

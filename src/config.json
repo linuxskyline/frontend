@@ -1,4 +1,4 @@
 {
-    "api_root": "http://localhost:8000/api",
+    "api_root": "https://api.skyline.hhra.uk/api",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjF9.Vcp2grZ53t_OG3jwSXsRwfc_UUjboNgZarkAGiX0jgM"
 }

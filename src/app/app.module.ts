@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AutofocusDirective } from './autofocus.directive';
 import { UpdateListComponent } from './update-list/update-list.component';
 import { AppConfigService } from './app-config-service.service';
+import { HostDisplayComponent } from './host-display/host-display.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppConfigService } from './app-config-service.service';
     HostlistComponent,
     AddHostComponent,
     AutofocusDirective,
-    UpdateListComponent
+    UpdateListComponent,
+    HostDisplayComponent
   ],
   imports: [
     BrowserModule,
