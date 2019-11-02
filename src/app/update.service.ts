@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Update } from './update';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import {map} from "rxjs/operators";
+import { map } from "rxjs/operators";
+import { AppConfigService } from './app-config-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import {map} from "rxjs/operators";
 export class UpdateService {
   private cache: Observable<Update[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private config: AppConfigService) { }
 
   getUpdates(host_id: number): Observable<Update[]> {
     this.cache = this.http.get(`${this.config.apiRoot}/updates?id=${host_id}`, {
