@@ -5,29 +5,6 @@ import { Observable, of } from 'rxjs';
 import {map} from "rxjs/operators";
 import { AppConfigService } from './app-config-service.service';
 
-var HEROS = [
-  {
-    name: "test",
-    updates: 5,
-    security: 2
-  },
-  {
-    name: "test",
-    updates: 4,
-    security: 2
-  },
-  {
-    name: "test",
-    updates: 5,
-    security: 5
-  },
-  {
-    name: "test",
-    updates: 5,
-    security: 2
-  }
-];
-
 @Injectable({
   providedIn: 'root'
 })
