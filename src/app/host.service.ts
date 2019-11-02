@@ -3,6 +3,7 @@ import { Host } from './host';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import {map} from "rxjs/operators";
+import { AppConfigService } from './app-config-service.service';
 
 var HEROS = [
   {
@@ -32,20 +33,20 @@ var HEROS = [
 })
 export class HostService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private config: AppConfigService) { }
 
   getHosts(): Observable<Object> {
-    return this.http.get('http://localhost:8000/api/hosts', {
+    return this.http.get(`${this.config.apiRoot}/hosts`, {
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjF9.Vcp2grZ53t_OG3jwSXsRwfc_UUjboNgZarkAGiX0jgM"
+        "Authorization": `Bearer ${this.config.token}`
       }
     });
   }
 
   addHost(host: Host) {
-    return this.http.post("http://localhost:8000/api/hosts", host, {
+    return this.http.post(`${this.config.apiRoot}/hosts`, host, {
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOjF9.Vcp2grZ53t_OG3jwSXsRwfc_UUjboNgZarkAGiX0jgM"
+        "Authorization": `Bearer ${this.config.token}`
       }
     })
   }

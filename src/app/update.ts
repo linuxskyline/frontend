@@ -6,7 +6,7 @@ export class Update {
 
     deserialize(input: any) {
         Object.assign(<any>this, input);
-    
+
         return this;
     }
 }

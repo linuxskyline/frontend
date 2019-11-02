@@ -19,7 +19,8 @@ export class UpdateListComponent implements OnInit {
     this.updateService.getUpdates(host_id)
       .subscribe(
         data => {
-          this.updates = data["data"],
+	  this.updates = data
+
           console.log(data)
           console.log(this.updates)
         },

@@ -4,14 +4,24 @@
             <th id="hostlist-name-header">Name</th>
             <th>Total Updates</th>
             <th>Security Updates</th>
-            <th>Token</th>
+            <th style="min-width:350px">Token</th>
         </tr>
         <tr *ngFor="let host of hosts">
             <td>
                 <a routerLink="/hosts/{{ host.ID }}/updates">{{ host.name }}</a>
             </td>
-            <td>{{ host.updates }}</td>
-            <td>{{ host.securityUpdates }}</td>
+            <td>
+                <span [class.warning]="host.updates > 0"
+                      [class.ok]="host.updates == 0">
+                    {{ host.updates }}
+                </span>
+            </td>
+            <td>
+                <span [class.bad]="host.securityUpdates > 0"
+                      [class.ok]="host.securityUpdates == 0">
+                    {{ host.securityUpdates }}
+                </span>
+            </td>
             <td>{{ host.token }}</td>
         </tr>
     </table>
