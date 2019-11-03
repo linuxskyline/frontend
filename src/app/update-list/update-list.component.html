@@ -1,12 +1,16 @@
 <div class="table-container">
         <table id="updatelist">
             <tr>
+                <th id="column-checkbox"></th>
                 <th id="hostlist-name-header">Name</th>
                 <th>Installed Version</th>
                 <th>Available Version</th>
-                <th>Security?</th>
+                <th id="column-security">Security?</th>
             </tr>
             <tr *ngFor="let update of updates">
+                <td>
+                    <input type="checkbox" />
+                </td>
                 <td>{{ update.packageName }}</td>
                 <td>{{ update.currentVersion }}</td>
                 <td>{{ update.newVersion }}</td>

@@ -1,3 +1,11 @@
+#column-checkbox {
+    width: 25px;
+}
+
+#column-security {
+    width: 100px;
+}
+
 th, td {
     width: 100%;
     padding: 10px;
@@ -19,6 +27,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    table-layout: fixed;
 }
 
 .table-container {
